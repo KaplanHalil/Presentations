@@ -175,16 +175,11 @@ x_1, x_2, \dots, x_p \in \mathbb{Z},
 
 
 %---------------------------------------------------------
-\begin{frame}{MILP Example: Problem Setup}
+\begin{frame}{MILP Example}
 A company produces two products: \textbf{A} and \textbf{B}.  
-The goal: \textbf{maximize profit} under production limits.
+The goal: \textbf{maximize profit} under production limits.\\
 
 
-\end{frame}
-
-%---------------------------------------------------------
-\begin{frame}{MILP Example: Objective}
-\textbf{Maximize profit:}
 \[
 Z = 40x + 30y
 \]
@@ -503,7 +498,9 @@ L(a,b,c,d,e) = (e\oplus a\oplus b,\; a\oplus b\oplus c,\; b\oplus c\oplus d,\; c
 \begin{frame}
 \frametitle{MILP Modelling of XOR Operation}
 
-Following \cite{mouha2012differential}, let $x_{in1}$ and $x_{in2}$ be the input differences, and $x_{out}$ be the output difference of the XOR.  
+Following \cite{mouha2012differential}, \\
+$x_{in1}$, $x_{in2}$ : input differences of XOR \\
+$x_{out}$ : output difference of XOR.\\  
 The branch number is $2$.
 
 We introduce a binary variable $d$:
@@ -572,17 +569,14 @@ Goal: minimize the number of \textbf{active S-boxes} to find the best differenti
 We only track \textbf{activity} with a binary variable — no internal structure is modelled.
 \end{frame}
 
-\begin{frame}
-    \frametitle{H-representation}
-    
-\begin{center}
-    $L(a,b,c)=(a \oplus b , a \oplus c , b \oplus c ) \text{ where a,b.c are 2 bit values}  $
-\end{center}
 
-\end{frame}
 
 \begin{frame}
     \frametitle{H-representation example}
+
+    \begin{center}
+    $L(a,b,c)=(a \oplus b , a \oplus c , b \oplus c ) \text{ where a,b.c are 2 bit values}  $
+\end{center}
 \begin{table}[h]
 \footnotesize
 \centering
@@ -697,6 +691,7 @@ We only track \textbf{activity} with a binary variable — no internal structure
 \end{frame}
 
 \begin{frame}
+\frametitle{Differential cryptanalysis model with MILP}
 \begin{itemize}
     \item Number of Constrains:  18169
     \item Number of Variables:  85
@@ -810,6 +805,7 @@ which is not usable for differential attack.
 \end{frame}
 
 \begin{frame}
+\frametitle{Differential cryptanalysis model with MILP}
 \begin{itemize}
     \item Number of Constrains:  48649
     \item Number of Variables:  320
