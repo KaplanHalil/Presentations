@@ -700,13 +700,13 @@ We only track \textbf{activity} with a binary variable — no internal structure
 \begin{itemize}
     \item Number of Constrains:  18169
     \item Number of Variables:  85
-    \item Minimum number of active s-box:  16.0
+    \item Minimum number of active s-box for 3 round:  16.0
     \item Best probability for s-box: $2^{-6}$
-    \item 
+    \item Best probability for 3 round differential characteristic will 
+    be $(2^{-6})^{16}= 2^{-96} $
 \end{itemize}
 
-
-
+which is not usable for differential attack.
 
 \end{frame}
 
@@ -808,6 +808,21 @@ We only track \textbf{activity} with a binary variable — no internal structure
 \label{fig:itubeeRelated}
 \end{figure}
 \end{frame}
+
+\begin{frame}
+\begin{itemize}
+    \item Number of Constrains:  48649
+    \item Number of Variables:  320
+    \item Minimum number of active s-box for 8 round:  16.0
+    \item Best probability for s-box: $2^{-6}$
+    \item Best probability for 8 round differential characteristic will 
+    be $(2^{-6})^{16}= 2^{-96} $
+\end{itemize}
+
+which is not usable for related-key differential attack.
+
+\end{frame}
+
 
 \begin{frame}
 
