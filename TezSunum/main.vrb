@@ -1,0 +1,22 @@
+\frametitle{MILP example}
+We will use Sagemath and GLPK solver for modeling.
+
+
+
+\begin{lstlisting}
+p.<x,y> = MixedIntegerLinearProgram(maximization=True, solver="GLPK")
+p.set_objective(40*x[0] + 30*y[0])
+p.add_constraint(2*x[0] + y[0] == 100)
+p.add_constraint(x[0] + 3*y[0] == 90)
+p.add_constraint(x[0] >= 20)
+p.add_constraint(y[0] >= 0)
+print(p.solve())
+print(p.get_values(x, y))
+\end{lstlisting}
+
+\begin{itemize}
+    \item Maximum profit: 2160
+    \item A : 42
+    \item B : 16
+\end{itemize}
+
