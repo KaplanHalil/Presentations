@@ -378,8 +378,28 @@ where $X$ represents the plaintext, $Y$ represents the ciphertext and $a_1, a_2,
 
 
 \end{frame}
+%---------------------------------------------------------
 
+\begin{frame}{Linear Cryptanalysis}
 
+Linear cryptanalysis leverages the high probability of certain linear approximations holding over many plaintexts and ciphertexts. In an ideal cipher:
+\begin{itemize}
+    \item For a given linear approximation, the probability that it holds is $1/2$.
+    \item The goal of linear cryptanalysis is to identify linear approximations that occur with probabilities noticeably deviating from $1/2$.
+\end{itemize}
+
+\end{frame}
+\begin{frame}{Linear Cryptanalysis}
+
+\begin{itemize}
+    \item Approximates nonlinear components of the cipher with linear equations.
+    \item Measures the bias of these approximations compared to the ideal 50\% probability.
+    \item Obtain large number of known plaintext--ciphertext pairs.
+    \item Constructs a global linear relation involving plaintext, ciphertext, and key bits.
+    \item Identifies key bits by selecting the key value that best matches the observed bias.
+\end{itemize}
+    
+\end{frame}
 %---------------------------------------------------------
 
 \section{ITUbee Block Cipher}
@@ -745,6 +765,7 @@ which is not usable for differential attack.
 \end{frame}
 
 \begin{frame}
+\frametitle{Related-key differential cryptanalysis model with MILP}
 \begin{figure}[!ht]
 \centering
 \resizebox{1\textwidth}{!}{%
