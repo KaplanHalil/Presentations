@@ -56,6 +56,31 @@
       \field{pages}{16\bibrangedash 27}
       \range{pages}{12}
     \endentry
+    \entry{matsui1993linear}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=b63088e6d52b8ebc6003a1880e288050}{%
+           family={Matsui},
+           familyi={M\bibinitperiod},
+           given={Mitsuru},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{b63088e6d52b8ebc6003a1880e288050}
+      \strng{fullhash}{b63088e6d52b8ebc6003a1880e288050}
+      \strng{bibnamehash}{b63088e6d52b8ebc6003a1880e288050}
+      \strng{authorbibnamehash}{b63088e6d52b8ebc6003a1880e288050}
+      \strng{authornamehash}{b63088e6d52b8ebc6003a1880e288050}
+      \strng{authorfullhash}{b63088e6d52b8ebc6003a1880e288050}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{EUROCRYPT}
+      \field{title}{Linear Cryptanalysis Method for DES Cipher}
+      \field{year}{1993}
+    \endentry
     \entry{mouha2012differential}{inproceedings}{}
       \name{author}{4}{}{%
         {{hash=c3f65c51c7b6c44728028c1c154b1f1c}{%

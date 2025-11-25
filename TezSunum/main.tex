@@ -256,25 +256,6 @@ For two plaintexts $P$ and $P'$:
 
 \end{frame}
 
-
-%---------------------------------------------------------
-\begin{frame}{Differential Cryptanalysis: Probability}
-
-- Input difference: $\Delta X$ \\ 
-- Output difference: $\Delta Y$ \\
-\bigskip
-\textbf{In an ideal cipher:}  
-- For $n$-bit input,  
-\[
-\Pr[\Delta X \to \Delta Y] = \tfrac{1}{2^n}
-\]
-
-\bigskip
-\textbf{In practice:}  
-- Some input differences lead to output differences with much higher probability.  
-
-\end{frame}
-
 %---------------------------------------------------------
 
 \begin{frame}
@@ -385,15 +366,17 @@ F & 0 & 2 & 0 & 2 & 2 & 0 & 0 & 2 & 2 & 0 & 2 & 0 & 2 & 0 & 0 & 2 \\
 
 \begin{frame}{Linear Cryptanalysis}
 
-    Adds differentials also to key sechedule.  
+Linear cryptanalysis \cite{matsui1993linear} is a known-plaintext attack.The basic methodology of linear cryptanalysis is construct linear equation:
 
-    \begin{figure}
-        \centering
-        \includegraphics[width=0.7\linewidth]{fig/image.png}
-        \caption{Related-key Differential Cryptanalysis}
-        \label{fig:placeholder}
-    \end{figure}
-    
+
+\begin{equation}
+ X[a_1] \oplus X[a_2] \oplus \ldots \oplus X[a_k] \oplus Y[b_1] \oplus Y[b_2] \oplus \ldots \oplus Y[b_l] = 0
+\label{eqn:linear}
+\end{equation}
+
+where $X$ represents the plaintext, $Y$ represents the ciphertext and $a_1, a_2, \ldots, a_k$ and $b_1, b_2, \ldots, b_l$ are bit positions.
+
+
 \end{frame}
 
 
