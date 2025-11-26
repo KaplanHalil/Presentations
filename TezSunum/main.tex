@@ -951,18 +951,18 @@ which is not usable for related-key differential attack.
 \begin{frame}
 \frametitle{Linear cryptanalysis model with MILP}
 \begin{itemize}
-    \item Number of Constrains:  48649
-    \item Number of Variables:  320
-    \item Minimum number of active s-box for 8 round:  16.0
-    \item Best probability for s-box: $2^{-6}$
-    \item Best probability for 8 round differential characteristic will 
-    be $(2^{-6})^{16}= 2^{-96} $
+    \item Number of Constrains:  18169
+    \item Number of Variables:  85
+    \item Minimum number of active s-box for 3 round:  16.0
+    \item Best linear bias for ITUbee S-box input-output mask: $2^{-4}$
+    \item 3 round probability is $2^{15}*(2^{-4})^{16}=2^{-49}$. \cite{matsui1993linear}
+    \item Number of required plaintexts for the three round attack is $(2^{-49})^{-2}= 2 ^{96}$ \cite{matsui1993linear}
 \end{itemize}
 
-Best linear bias for ITUbee S-box input-output mask is $2^{-4}$. In our MILP model we found that minimum number of active s-box for 3 consecutive round is 16. We use piling up lemma in \cite{matsui1993linear} for calculating 3 round probability. 3 round probability is $2^{15}*(2^{-4})^{16}=2^{-49}$. Linear cryptanalysis is known-plaintext attack. Number of required plaintexts for the three round attack is $(2^{-49})^{-2}= 2 ^{96}$ which is more than all possible plaintexts for the cipher. As a conclusion, we can say that 3 round of the ITUbee algorithm is secure against linear cryptanalysis.    
 
+which is more than all possible plaintexts for the cipher. 
+  
 
-which is not usable for linear cryptanalysis.
 
 \end{frame}
 \begin{frame}{Our contribution}
@@ -983,6 +983,9 @@ which is not usable for linear cryptanalysis.
     \caption{Result Comparison}
     \label{tab:RelatedKeyDif}
 \end{table}
+
+All MILP models we developed can be found at \url{https://github.com/KaplanHalil/Milp/tree/main/ITUBEE} and discovered characteristics 
+are included within the thesis  to support further research and reproducibility.
 
 
 \end{frame}
